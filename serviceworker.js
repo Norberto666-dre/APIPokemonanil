@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "pokedex-v1";
+const CACHE_NAME = "pokedex-v2";
 const STATIC_CACHE = `${CACHE_NAME}-static`;
 const POKEMON_CACHE = `${CACHE_NAME}-pokemon`;
 
@@ -8,7 +8,10 @@ const APP_FILES = [
   "./index.html",
   "./styles.css",
   "./app.js",
-  "./manifest.json"
+  "./manifest.json",
+  "./images/icon-192.png",
+  "./images/icon-512.png",
+  "./images/icon-maskable-512.png"
 ];
 
 // Instalar y guardar los archivos principales

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#101322" />
+    <meta name="theme-color" content="#f6f7f8" />
     <meta
       name="description"
       content="Explora Pokémon con tu propia Pokédex interactiva."
@@ -12,6 +12,8 @@
     <title>Pokédex | Pokémon Explorer</title>
 
     <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/icon-192.png" />
+    <link rel="apple-touch-icon" href="./images/icon-192.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
@@ -29,6 +31,9 @@
         <span class="status-dot"></span>
         POKÉMON EXPLORER
       </span>
+      <button id="install-button" class="install-button" type="button" hidden>
+        Instalar app
+      </button>
     </header>
 
     <main>

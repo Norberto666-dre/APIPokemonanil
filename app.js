@@ -4,6 +4,29 @@ const input = document.getElementById("pokemon-name");
 const container = document.getElementById("pokemon-container");
 const message = document.getElementById("message");
 const searchButton = document.getElementById("search-button");
+const installButton = document.getElementById("install-button");
+let installPrompt = null;
+
+// Mostrar una acción propia cuando el navegador ofrece la instalación.
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  installButton.hidden = false;
+});
+
+installButton.addEventListener("click", async () => {
+  if (!installPrompt) return;
+
+  installPrompt.prompt();
+  await installPrompt.userChoice;
+  installPrompt = null;
+  installButton.hidden = true;
+});
+
+window.addEventListener("appinstalled", () => {
+  installPrompt = null;
+  installButton.hidden = true;
+});
 
 const typeColors = {
   fire: "#ff795b",
